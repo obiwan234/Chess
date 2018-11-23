@@ -1,0 +1,80 @@
+<html>
+		
+<head>
+	<meta charset="UTF-8">
+	<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+	<script language="javascript" type="text/javascript" src="../libraries/p5.js"></script>
+	<script language="javascript" src="../libraries/p5.dom.js"></script>
+	<script language="javascript" src="../libraries/p5.sound.js"></script>
+	<script language="javascript" type="text/javascript" src="../Player.js"></script>
+	<script language="javascript" type="text/javascript" src="../Grid.js"></script>
+	<script language="javascript" type="text/javascript" src="../Pieces.js"></script>
+	<script language="javascript" type="text/javascript" src="Chess.js"></script>
+	<title id=gamename>Chess</title>
+
+	<style>
+.dropbtn {
+	padding: 8px;
+	font-size: 16px;
+}
+
+.dropdown {
+	position: absolute;
+	display: inline-block;
+	left: 175px;
+	top: 50px;
+}
+
+.dropdown-content {
+	display: none;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 16px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown a:hover {background-color: rgb(221,221,221);}
+
+.show {display: block;}
+</style>
+</head>
+
+<body>
+<div class="dropdown">
+<button id="GameList" onclick="myFunction()" class="dropbtn">Game List</button>
+<dl id="myDropdown" class="dropdown-content">
+
+</dl>
+</div>
+
+<script>
+/*used dl and dt above bec regular list indents*/
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+	document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+
+	let dropdowns = document.getElementsByClassName("dropdown-content");
+	for (let i = 0; i < dropdowns.length; i++) {
+		let openDropdown = dropdowns[i];
+		if (openDropdown.classList.contains('show')) {
+			openDropdown.classList.remove('show');
+		}
+	}
+}
+}
+</script>
+
+</body>
+</html>
