@@ -19,11 +19,11 @@ let highlightOn=true;
 let canvas;
 
 function preload() {
-	boardimg=loadImage("ChessAssets/chessboard.png");
+	boardimg=loadImage("../ChessAssets/chessboard.png");
 	ChessImages=[[],[]];
 	for(let colorNum=0; colorNum<2; colorNum++) {
 		for(let pieceNum=0; pieceNum<6; pieceNum++) {
-			let pieceImg=loadImage("ChessAssets/chesspiecec"+colorNum+"p"+pieceNum+".png");
+			let pieceImg=loadImage("../ChessAssets/chesspiecec"+colorNum+"p"+pieceNum+".png");
 			ChessImages[colorNum].push(pieceImg);
 		}
 	}
