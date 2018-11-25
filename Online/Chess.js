@@ -50,6 +50,7 @@ function preload() {
 	connection.database = firebase.database();
 	if(window.name) {
 		connection.gameID=window.name;
+		idMessage.html("Your Game ID: "+connection.gameID);
 	}
 
 	boardimg=loadImage("ChessAssets/chessboard.png");
@@ -109,6 +110,7 @@ function initializeVars() {
 function joinGame() {
 	console.log(this.html());
 	connection.gameID=this.html();
+	idMessage.html("Your Game ID: "+connection.gameID);
 	loadGame(this.html());
 	connection.currGame=connection.database.ref("gameList/"+connection.gameID);
 }
@@ -276,6 +278,9 @@ function completeUndo() {
 function makeDOM() {
 	messageSlot=createElement("h1");
 	messageSlot.position(windowWidth/2-width/2,height+10+windowHeight/3-height/2);
+	idMessage=createElement("h1");
+	idMessage.position(50,30);
+	idMessage.html("Your Game ID: "+connection.gameID);
 	again=createButton("Restart");
 	again.position(425+windowWidth/2-width/2,10+windowHeight/3-height/2);
 	again.mousePressed(restartCall);
