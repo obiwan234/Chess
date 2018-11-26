@@ -45,16 +45,16 @@ function draw() {
 		fill(255);
 		rect(0.2*width,0.5*height,0.28*width,.6*height);
 		fill(0);
-		textSize(0.025*width);
+		textSize(0.023*width);
 		text("Settings coming soon!",0.08*width,0.5*height);
 	}
 	if(credit) {
 		fill(255);
 		rect(0.8*width,0.5*height,0.28*width,.6*height);
 		fill(0);
-		textSize(0.02*width);
+		textSize(0.018*width);
 		text("Coding by Moshe Goldberg",0.68*width,0.4*height);
 		text("Graphics handled by p5.js",0.684*width,0.5*height);
-		text("Assets from assorted places",0.679*width,0.6*height);
+		text("Assets from various sources",0.679*width,0.6*height);
 	}
 }
